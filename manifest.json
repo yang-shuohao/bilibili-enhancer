@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Bilibili 播放控制 & 黑暗模式切换",
+  "version": "1.0",
+  "description": "控制 B站视频播放速度，支持一键深色/浅色主题切换",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["*://www.bilibili.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.bilibili.com/video/*"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+   "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png"
+  }
+}
